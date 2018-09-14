@@ -1,0 +1,24 @@
+A first boot or NVRAM reset condition has been detected. 
+If you continue to see this message, 
+consult the system user's guide for more information.)
+
+The CMOS is bad or was recently replaced.
+(If you continue to see this message, 
+consult the system user's guide for more information.)
+
+The CMOS default were loaded.
+(If you continue to see this message, 
+consult the system user's guide for more information.)
+
+
+please supply a commit message    //
+a good commit message has the following format:
+Fist line: Describe in one sentence what you did.
+second line : Blank
+Remaining lines: Describe why this change is good
+}
+{
+}	//
+{//
+
+E:\桌面\课程\2018学年\秋季-大三上\软件工程\9.15
