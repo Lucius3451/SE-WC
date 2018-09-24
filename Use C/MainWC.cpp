@@ -1,4 +1,4 @@
-
+/*
 #include <iostream>
 #include <string>
 //#include <ifstream>
@@ -6,34 +6,32 @@
 #include <cctype>
 #include <vector>
 #include <fstream>
-
-//#include "Thistime.h"
+*/ 
+#include "Thistime.h"
 using namespace std; 
-
+/* 
 bool Blank_Cheack(string s);
 int Count_ch(vector<string> s);
 int Count_word(vector<string> s);
 void Count_Special(vector<string> s);
-
+*/ 
 int main(int argc, char* argv[])
 {
 	//检查输入情况
 	if (argc == 2)
 	{
-		string amazing =  argv[1];
-		if (amazing == "-x")
-			system("E:\\桌面\\课程\\2018学年\\秋季-大三上\\软件工程\\WC\\ShowTxt.exe");	
+		if (argv[1] == "-x")
+			system("E:\\桌面\\课程\\2018学年\\秋季-大三上\\软件工程\\ShowTxt.exe");	
 	}
 	else if (argc == 3)
 	{
 		ifstream infile;
+		infile.open(argv[2]);
 		string aline;
 		vector<string> copy;
 		int lines;
 		int characters;
 		int words;
-		
-		infile.open(argv[2]);
 		if (!infile.is_open())
 		{
 			cout << "Could't open" << argv[2] << endl;
@@ -72,15 +70,15 @@ int main(int argc, char* argv[])
 	}
 	else
 	{
-		cout << argc << "~~~~~" << endl;
-		cout  << "The number of parameter is wrong." << endl;
-		cout  << "Please re-enter" << endl;
+		cout << argc << "~" << endl;
+		cout << "The number of parameter is wrong." << endl;
+		cout << "Please re-enter" << endl;
 	}
 	cout << "Done" << endl; 
     return 0;
 }
 
- 
+/* 
 bool Blank_Cheack(string s)
 {
 	if (!s.empty())
@@ -125,7 +123,7 @@ int Count_word(vector<string> s)
 			if (isalnum(s[i][j]) && !isalnum(s[i][j + 1]))
 				count++;
 		}
-		if (j < len && isalnum(s[i][j]))
+		if (isalnum(s[i][j]) && isalnum(s[i][j - 1]))
 			count++;
 	}
 	
@@ -160,4 +158,4 @@ void Count_Special(vector<string> s)
 		cout << "This file is empty." << endl;
 	}
 }
-
+*/ 
